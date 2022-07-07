@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greenary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <link rel="stylesheet" href="coloring.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+   href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesomefree@6.1.1/css/fontawesome.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./images/FInal_Logo.png" type="image/x-icon">
+<!--    <script src = "Script.js"></script>-->
+</head>
+<body>
+    <section class="header">
+       <nav>
+           <a href="index.html"> <img class="image-size" src="./images/Life.png"> </a>
+        <div class="nav-links" id = "navLinks">
+          <i class="fa fa-window-close" onclick="hideMenu()"></i> 
+           <ul>
+                <li><a href="index.html" target="_blank">HOME</a></li>
+                <li><a href="https://rzp.io/l/y0jED1vKn" target="_blank">DONATE</a></li>
+<!--                <li><a href="https://wa.me/917499622802" target="_blank">COLLABORATE</a></li>-->
+                <li><a href="https://api.whatsapp.com/send?phone=917499622802" target="_blank">COLLABORATE</a></li>
+                <li><a href="Contact.html" target="_blank">CONTACT US</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars"onclick="showMenu()"></i>
+      </nav>
+      <h1 class = "next-box">CONTACT US</h1>
+    </section>
+  
+<!--  Contact us   -->
+ 
+ <section class = "location">
+     
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61094.98693074082!2d74.54908032543143!3d16.854279330282797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc10c8187f060eb%3A0x37911f53cdc1ddb3!2sSangli%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1656643418144!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </section>
+  
+  <section class="contact-us">
+      <div class="row">
+          <div class="contact-col">
+              <div>
+                   <i class = "fa fa-home"></i>
+                   <span>
+                       <h4>Civil Hospital Road, Ganesh Nagar</h4>
+                       <p>Sangli, Maharashtra, India</p>
+                   </span>
+              </div>  
+          <div>
+              <i class="fa fa-phone"></i>
+              <span>
+                  <h4>+91 7499622802</h4>
+                  <p>Monday to Saturday 8 AM to 10 PM</p>
+              </span>
+          </div>
+          <div>
+              <i class="fa fa-envelope-o"></i>
+              <span>
+                  <h4>malivishal9826@gmail.com</h4>
+                  <p>Email us for your query</p>
+              </span>
+          </div>
+      </div>
+      <div class="contact-col">
+          <form method="post">
+              <input type="text" name = "name" placeholder = "Enter your name" required>
+              <input type="email" name = "email" placeholder = "Enter email address" required>
+              <input type="text" name = "subject" placeholder = "Enter your subject" required>
+              <textarea rows="10" name = "message" placeholder = "Message" required></textarea>
+              <button type="submit" class = "main-btn">Send Message</button>
+          </form>
+      </div>
+      </div>
+  </section>
+  
+  
+  
+<!--    Footer   -->
+
+<section class = "footer">
+    <h3>About Us</h3>
+    <p>Together, we create lasting solutions to our biggest environmental challenges<br>
+    Feel free to connect with us on social media handles</p>
+    
+    <div class="icons">
+        <a  href="https://www.facebook.com/people/Shreyash-Patil/100024436162364/" class="fa fa-facebook"></a>
+        <a  href="https://twitter.com/Vishal_6289"class = "fa fa-twitter"></a>
+        <a href="https://www.instagram.com/ikhlasmangure13/"class = "fa fa-instagram"></a>
+        <a href="https://www.linkedin.com/in/vishal-mali-a62410203/"class = "fa fa-linkedin"></a>
+    </div>
+    <p>Made With <i class = "fa fa-heart-o"></i> By Team Greenary</p>
+</section>
+
+
+
+<!--    Javascript for toggle Menu     -->
+    
+    <script>    
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+
+<script 
+     src="https://smtpjs.com/v3/smtp.js">
+</script>
+
+<script>
+    var mainbtn = document.getElementsByClassName('main-btn');
+    mainbtn.addEventListener('click',function(e))
+    {
+        e.preventDefault()
+    var name = document.getElementsByName("name")[0].value;
+    var email = document.getElementsByName("email")[0].value;
+    var subject = document.getElementsByName("subject")[0].value;
+    var message = document.getElementsByName("message")[0].value;
+    var body = 'name: '+ name +'<br/> email: '+ email + '<br/> subject' + '<br/> message' + message;
+        Email.send({
+    Host : "smtp.gmail.com",
+    Username : "malivishal9826@gmail.com",
+    Password : "vishal@2002",
+    To : 'malivishal9826@gmail.com',
+    From : email,
+    Subject : subject,
+    Body : body
+}).then(
+  message => alert(message)
+);
+    }
+    </script>
+</html>
+
+
+
+
+
